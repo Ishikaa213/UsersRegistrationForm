@@ -1,0 +1,154 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+ html,body{
+width: 100%;
+height: 100%;
+font-family: 'Arial', sans-serif;
+background-color: #f3f6fb;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+}
+  
+  .form-container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group label {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    color: #aaa;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #007acc;
+    background-color: #fff;
+  }
+  
+  .form-group input:focus + label {
+    top: -10px;
+    font-size: 0.9rem;
+    color: #007acc;
+  }
+  
+  .form-group input:valid + label {
+    top: -10px;
+    font-size: 0.9rem;
+    color: #007acc;
+  }
+  
+  .form-group .error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    display: none;
+  }
+  
+  .form-group input:invalid {
+    border-color: #e74c3c;
+  }
+  
+  .form-group input:invalid + label {
+    color: #e74c3c;
+  }
+  
+  .form-group input:invalid ~ .error-message {
+    display: block;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .checkbox-group label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .checkbox-group a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  
+  .checkbox-group a:hover {
+    text-decoration: underline;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007acc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+  }
+  
+  .submit-btn:active {
+    background-color: #004b8d;
+    transform: scale(1);
+  }
+  
+  /* Keyframe Animation for Form */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
